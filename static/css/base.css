@@ -1,0 +1,47 @@
+#main {
+  background-color: #edf1d6;
+}
+
+#content {
+  color: #40513b;
+  margin: 5%;
+}
+
+.nav {
+  height: 10vh;
+  width: 100%;
+  background-color: #40513b;
+}
+
+.nav a {
+  text-decoration: none;
+  font-size: 25px;
+  color: #edf1d6;
+  align-self: center;
+  padding-left: 5%;
+}
+
+.nav a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+b {
+  font-family: "Courier New", Courier, monospace;
+}
+
+img {
+  width: 100%;
+  border: solid #40513b 2px;
+  border-radius: 15px;
+}
+
+iframe {
+  width: 100%;
+  border: none;
+}
+
+table {
+  width: 80%;
+  margin: auto;
+}

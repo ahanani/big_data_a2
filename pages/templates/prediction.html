@@ -1,0 +1,127 @@
+{% extends "base.html" %} {% block content %}
+<h4>20% OFF - LIMITED TIME OFFER</h4>
+<p>
+  Let's see if you qualify for 20% off our bikes today. Fill out the following
+  and click the button at the end to find out!
+</p>
+<form
+  action="{% url 'homePost' %}"
+  method="post"
+  id="options"
+  style="display: grid; grid-template-columns: 25% 50% 25%; height: 50vh"
+>
+  {% csrf_token %}
+  <label style="margin: auto auto auto 0%">Gender</label>
+  <select
+    name="Gender"
+    style="
+      margin: auto auto auto 0%;
+      border: solid #40513b;
+      border-radius: 25px;
+      padding: 0% 5% 0% 5%;
+      width: 150px;
+      height: 40px;
+    "
+  >
+    <option value="0">Male</option>
+    <option value="1">Female</option></select
+  ><br />
+  <label style="margin: auto auto auto 0%">Age</label>
+  <input
+    name="Age"
+    style="
+      margin: auto auto auto 0%;
+      border: solid #40513b;
+      border-radius: 25px;
+      padding: 0% 5% 0% 5%;
+      width: 150px;
+      height: 40px;
+    "
+    type="number"
+    min="1"
+    required
+  /><br />
+  <label style="margin: auto auto auto 0%">Income</label>
+  <input
+    name="Income"
+    style="
+      margin: auto auto auto 0%;
+      border: solid #40513b;
+      border-radius: 25px;
+      padding: 0% 5% 0% 5%;
+      width: 150px;
+      height: 40px;
+    "
+    type="text"
+    required
+  /><br />
+  <label style="margin: auto auto auto 0%">Education</label>
+  <select
+    name="Education"
+    style="
+      margin: auto auto auto 0%;
+      border: solid #40513b;
+      border-radius: 25px;
+      padding: 0% 5% 0% 5%;
+      width: 150px;
+      height: 40px;
+    "
+  >
+    <option value="0">Bachelors</option>
+    <option value="1">Partial College</option>
+    <option value="2">High School</option>
+    <option value="3">Partial High School</option>
+    <option value="4">Graduate Degree</option></select
+  ><br />
+  <label style="margin: auto auto auto 0%">Commute Distance</label>
+  <select
+    name="Commute_Distance"
+    style="
+      margin: auto auto auto 0%;
+      border: solid #40513b;
+      border-radius: 25px;
+      padding: 0% 5% 0% 5%;
+      width: 150px;
+      height: 40px;
+    "
+  >
+    <option value="0">0-1 Miles</option>
+    <option value="1">1-2 Miles</option>
+    <option value="2">2-5 Miles</option>
+    <option value="3">5-10 Miles</option>
+    <option value="4">10+ Miles</option></select
+  ><br />
+  <label style="margin: auto auto auto 0%">Occupation</label>
+  <select
+    name="Occupation"
+    style="
+      margin: auto auto auto 0%;
+      border: solid #40513b;
+      border-radius: 25px;
+      padding: 0% 5% 0% 5%;
+      width: 150px;
+      height: 40px;
+    "
+  >
+    <option value="0">Skilled Manual</option>
+    <option value="1">Clerical</option>
+    <option value="2">Professional</option>
+    <option value="3">Manual</option>
+    <option value="4">Management</option></select
+  ><br />
+  <input
+    type="submit"
+    style="
+      grid-column: 1 / span 3;
+      margin: auto;
+      background: #40513b;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      width: 300px;
+      height: 50px;
+    "
+    value="Find out!"
+  />
+</form>
+{% endblock content %}

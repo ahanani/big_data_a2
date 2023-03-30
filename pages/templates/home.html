@@ -1,0 +1,30 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<h4>Bike Purchase Predictive Model</h4>
+<img
+  src="{% static 'resources/bike_event.jpg' %}"
+  alt="Bike Event"
+/><br /><br />
+<p>
+  Introducing a predictive model that uses a range of demographic and
+  socioeconomic features to predict whether a customer is likely to purchase a
+  bike. The model includes six key variables - gender, income, education,
+  occupation, commute distance, and age - and is based on a
+  <b>RandomForestClassifier</b> algorithm. The model's performance is measured
+  using RMSE (root mean squared error), with an average score of 0.64.
+</p>
+<p>
+  Through the utilization of this predictive model, we can accurately determine
+  whether a customer is potentially inclined to purchase a bike. In cases where
+  the model indicates that a customer is likely to make a purchase, we plan to
+  offer them a lucrative discount of 20% on regular bike prices, thereby
+  optimizing our marketing and sales strategy.
+</p>
+<p>
+  On the other hand, if the model indicates that a customer is unlikely to make
+  a purchase at present, we will inform them that they do not qualify for any
+  current discounts. This strategy allows us to capitalize on potential bike
+  purchasers while minimizing the likelihood of offering discounts to those less
+  likely to make a purchase, ultimately enhancing the overall efficiency and
+  profitability of our business operations.
+</p>
+{% endblock content %}
